@@ -1,0 +1,48 @@
+{
+  "name": "anoboy-ts",
+  "version": "1.0.0",
+  "description": "Unofficial TypeScript scraper and API wrapper for anoboy.quest",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src tests examples",
+    "format": "prettier --write src tests examples",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "anime",
+    "scraper",
+    "anoboy",
+    "typescript",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@types/node": "^26.6.5",
+    "@typescript-eslint/eslint-plugin": "^8.72.1",
+    "@typescript-eslint/parser": "^8.72.1",
+    "cheerio": "^1.2.0",
+    "eslint": "^10.13.0",
+    "prettier": "^3.9.10",
+    "tsup": "^9.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
